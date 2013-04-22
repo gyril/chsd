@@ -1,0 +1,128 @@
+html, body {
+	height: 100%;
+}
+
+body {
+  	padding-top: 20px;
+	padding-top: 120px;
+}
+
+.navbar-inner {
+	padding-top: 0;
+}
+
+.navbar-static-top {
+	padding-top: 80px;
+}
+
+.navbar-static-top .navbar-inner {
+	background-image: -webkit-linear-gradient(top,rgb(247, 193, 247),rgb(250, 134, 230));
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5) !important;
+	position: relative;
+}
+  
+  
+#logo {
+	height: 75px;
+	padding: 2px 0;
+	float: left;
+  	cursor: pointer;
+}
+
+.head-info {
+	float: right;
+	color: grey;
+	font: 9pt Arial;
+	margin-top: 10px;	
+}
+
+.head-image {
+	background: url('../img/wp4.jpg') center;
+	background-size: 100%;
+	height: 320px;
+	box-shadow: 0 -3px 5px 0 #555 inset;
+	border-bottom: 2px solid lightgrey;
+	position: relative;
+}
+
+.head-image.niveau-2 {
+	height: 120px;
+}
+
+.head-pastille {
+	position: relative;
+	top: 160px;
+	left: 100px;
+	max-width: 500px;
+	padding: 10px;
+	color: #FFFFFF;
+	background-color: rgba(60, 60, 60, 0.7);
+}
+
+.pastille {
+	border-radius: 1px;
+	border: 2px solid lightgrey;
+	background-color: #E4E4E4;
+}
+
+.pastille .header {
+	text-align: center;
+	margin-bottom: 0;
+	border-bottom: 1px solid lightgrey;
+	background-color: white;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	box-shadow: 0 1px 6px rgba(0,0,0,0.4);
+}
+
+.fiche {
+	margin-bottom: 20px;
+	background-color: #FFFFFF;
+	border: 2px solid lightgrey;
+	clear: both;
+	overflow: hidden;
+}
+
+.fiche img.mugshot {
+	width: 240px;
+	float: left;
+}
+
+.fiche .fiche-info {
+	display: inline-block;
+	vertical-align: top;
+	float: left;
+	width: 376px;
+}
+
+.fiche .fiche-nom {
+	background-color: rgb(245, 178, 223);
+	line-height: 60px;
+	text-align: center;
+	color: white;
+}
+
+.fiche .fiche-detail {
+	padding: 5px;
+}
+
+.footer {
+	box-shadow: 0 -1px 5px 0 #555;
+	border-top: 2px solid lightgrey;
+	margin-top: 40px;
+	padding: 20px 0;
+	background-image: -webkit-linear-gradient(top,rgb(247, 193, 247),rgb(250, 134, 230));
+}
+  
+.btn-pink {
+  	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0,0,0,1);
+	background-color: rgb(157, 91, 183);
+	background-image: -moz-linear-gradient(top,rgb(206, 125, 206),rgb(150, 74, 137));
+	background-image: -webkit-linear-gradient(top,rgb(206, 125, 206),rgb(150, 74, 137));
+}
+  
+.btn-pink:hover {
+  	color: #FFF;
+  	background-color: rgb(150, 74,137);
+}
