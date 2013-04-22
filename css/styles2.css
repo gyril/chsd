@@ -16,7 +16,7 @@ body {
 }
 
 .navbar-static-top .navbar-inner {
-	background-image: -webkit-linear-gradient(top,rgb(247, 193, 247),rgb(250, 134, 230));
+	background-image: -webkit-linear-gradient(top,rgb(243, 168, 243),rgb(250, 134, 230));
 	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5) !important;
 	position: relative;
 }
@@ -33,7 +33,7 @@ body {
 	float: right;
 	color: grey;
 	font: 9pt Arial;
-	margin-top: 10px;	
+	margin-top: 5px;	
 }
 
 .head-image {
@@ -111,7 +111,7 @@ body {
 	border-top: 2px solid lightgrey;
 	margin-top: 40px;
 	padding: 20px 0;
-	background-image: -webkit-linear-gradient(top,rgb(247, 193, 247),rgb(250, 134, 230));
+	background-image: -webkit-linear-gradient(top,rgb(243, 168, 243),rgb(250, 134, 230));
 }
   
 .btn-pink {
