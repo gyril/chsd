@@ -65,11 +65,15 @@ form .input {
 	top: 160px;
 	display: inline-block;
 	padding: 10px;
-	color: #FFFFFF;
+	color: rgb(101, 183, 255);
 	background-color: rgba(60, 60, 60, 0.7);
 	font: 22pt Roboto;
 	text-transform: uppercase;
 	font-weight: 100;
+}
+
+.head-pastille strong {
+	color: rgb(41, 143, 245)
 }
 
 .pastille {
