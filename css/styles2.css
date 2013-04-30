@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
+
 html, body {
 	height: 100%;
 }
@@ -5,6 +7,15 @@ html, body {
 body {
   	padding-top: 20px;
 	padding-top: 120px;
+}
+
+form label {
+	margin-left: 10px;
+}
+
+form .input {
+	background-color: #FAFAFA;
+	margin-bottom: 20px;
 }
 
 .navbar-inner {
@@ -52,11 +63,13 @@ body {
 .head-pastille {
 	position: relative;
 	top: 160px;
-	left: 100px;
-	max-width: 500px;
+	display: inline-block;
 	padding: 10px;
 	color: #FFFFFF;
 	background-color: rgba(60, 60, 60, 0.7);
+	font: 22pt Roboto;
+	text-transform: uppercase;
+	font-weight: 100;
 }
 
 .pastille {
