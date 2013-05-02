@@ -89,15 +89,26 @@
 		<p class="lead">Par spécialité</p>
 		<div class="row">
 			<div class="span4">
-				<ul>
-					<li>Tout</li>
-					<li>PMA</li>
-					<li>Fertilité</li>
+				<ul style="list-style: none; margin: 0;">
+					<li><label class="radio"><input name="filter" checked="checked" type="radio" id="filterAll" /> Toutes</label></li>
+					<li><label class="radio"><input name="filter" type="radio" id="filterPma" /> PMA</label></li>
+				</ul>
+			</div>
+			<div class="span4">
+				<ul style="list-style: none;">
+					<li><label class="radio"><input name="filter" type="radio" id="filterChirurgie" /> Chirurgie Gynécologique</label></li>
+					<li><label class="radio"><input name="filter" type="radio" id="filterOnco" /> Cancer du sein</label></li>
+				</ul>
+			</div>
+			<div class="span4">
+				<ul style="list-style: none;">
+					<li><label class="radio"><input name="filter" type="radio" id="filterMutilations" /> Mutilations sexuelles</label></li>
+					<li><label class="radio"><input name="filter" type="radio" id="filterPF" /> Planning Familial</label></li>
 				</ul>
 			</div>
 		</div>
 		<hr>
-		<div class="row">
+		<div class="row" style="overflow: hidden;">
 			<div class="span8">
 				
 				<section id="hatem">

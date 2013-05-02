@@ -5,8 +5,16 @@ html, body {
 }
 
 body {
-  	padding-top: 20px;
-	padding-top: 120px;
+ 	padding-top: 120px;
+}
+
+section {
+    padding-top:130px;
+    margin-top:-130px;
+}
+
+input[type=radio] {
+	-webkit-appearance: checkbox;
 }
 
 form label {
@@ -113,7 +121,7 @@ form .input {
 }
 
 .fiche .fiche-nom {
-	background-color: rgb(245, 178, 223);
+	background-color: rgba(238, 124, 238, 0.9);
 	line-height: 60px;
 	text-align: center;
 	color: white;
