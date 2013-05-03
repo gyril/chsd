@@ -70,7 +70,7 @@ form .input {
 
 .head-pastille {
 	position: relative;
-	top: 160px;
+	top: 50px;
 	display: inline-block;
 	padding: 10px;
 	color: white;
@@ -80,9 +80,15 @@ form .input {
 	font-weight: 100;
 }
 
-.head-pastille strong {
-	
+.head-bandeau {
+	position: relative;
+	top: 90px;
+	height: 140px;
+	border-top: 2px solid rgba(238, 124, 238, 0.6);
+	border-bottom: 2px solid rgba(238, 124, 238, 0.6);
+	background-color: rgba(80, 80, 80, 0.4);
 }
+
 
 .pastille {
 	border-radius: 1px;
