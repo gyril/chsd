@@ -75,6 +75,7 @@ form .input {
 	padding: 10px;
 	color: white;
 	background-color: rgba(238, 124, 238, 0.9);
+	box-shadow: 0 0 10px 0 black;
 	font: 22pt Roboto;
 	text-transform: uppercase;
 	font-weight: 100;
@@ -84,9 +85,18 @@ form .input {
 	position: relative;
 	top: 90px;
 	height: 140px;
-	border-top: 2px solid rgba(238, 124, 238, 0.6);
-	border-bottom: 2px solid rgba(238, 124, 238, 0.6);
+	/*border-top: 2px solid rgba(238, 124, 238, 0.6);
+	border-bottom: 2px solid rgba(238, 124, 238, 0.6);*/
 	background-color: rgba(80, 80, 80, 0.4);
+}
+
+.bouton-orientation {
+	margin: 10px 0;
+	padding: 10px;
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 0 0 1px 0 black;
+	height: 100px;
+	width: 80%;
 }
 
 
@@ -98,11 +108,10 @@ form .input {
 
 .pastille .header {
 	text-align: center;
+	line-height: 50px;
 	margin-bottom: 0;
 	border-bottom: 1px solid lightgrey;
 	background-color: white;
-	border-bottom-left-radius: 5px;
-	border-bottom-right-radius: 5px;
 	box-shadow: 0 1px 6px rgba(0,0,0,0.4);
 }
 
