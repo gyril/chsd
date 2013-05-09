@@ -42,8 +42,8 @@
 	          <div class="nav-collapse collapse">
 	            <ul class="nav">
 	              <li><a href="#">Accueil</a></li>
-	              <li class="active"><a href="consulter2.html">Consultation</a></li>
-	              <li><a href="accouchement2.html">Accouchement</a></li>
+	              <li><a href="consulter2.html">Consultation</a></li>
+	              <li class="active"><a href="accouchement2.html">Accouchement</a></li>
 	              <li><a href="equipe2.html">Equipe médicale</a></li>
 	              <li><a href="professionnels2.html">Réseau ville</a></li>
 	              <li><a href="chiffres-cles2.html">Chiffres clés</a></li>
@@ -53,22 +53,23 @@
     		</div>
     	</div>
     </div>
-        
+    
     <div class="head-image niveau-2">
 
     </div>
 
     <div class="container" style="padding-top: 20px;">
 		<div class="page-header">
-			<h1>Demande de consultation</h1>
+			<h1>Formulaire de demande d'accouchement</h1>
 		</div>
 		
-		<p>Ce formulaire vous permettra d'être recontactée par téléphone par le secrétariat de la maternité, afin de convenir d'une date de rendez-vous pour votre consultation.</p>
+		<p>Ce formulaire vous permettra d'être inscrite à l'accouchement au centre hospitalier Delafontaine.<br>
+			Un appel de notre équipe fera suite à cette demande dans 7 à 10 jours.</p>
 		<form class="form-horizontal" method="POST" action="envoi2.html">
 			 <fieldset>
     			<legend>Formulaire</legend>
     				<div class="row">
-						<div class="span5">
+						<div class="span8">
 		
 			    			<label>Prénom</label>
 			    			<input class="span5 input" type="text" name="inputPrenom" placeholder="Prénom">
@@ -78,27 +79,49 @@
 			    			<input class="span5 input" type="text" name="inputNom" placeholder="Nom">
 			    			
 			    			<br>
+							<label>Nom de jeune fille</label>
+			    			<input class="span5 input" type="text" name="inputNomJF" placeholder="Nom de jeune fille">
+			    			
+			    			<br>
+							<label>Née le</label>
+			    			<input class="span1 input" type="text" name="inputNaissanceJ" placeholder="JJ">
+			    			<input class="span1 input" type="text" name="inputNaissanceM" placeholder="MM">
+			    			<input class="span2 input" type="text" name="inputNaissanceA" placeholder="AAAA">
+			    			
+			    			<br>
 			    			<label>Téléphone portable</label>
-			    			<input class="span5 input" type="text" name="inputTel" placeholder="06 … … … …">
+			    			<input class="span3	 input" type="text" name="inputTel" placeholder="0. … … … …">
 			    			
 			    			<br>
 			    			<label>Adresse e-mail</label>
 			    			<input class="span5 input" type="text" name="inputMail" placeholder="nom@mail.com">
 			    			
 			    			<br>
-			    			<label>Objet</label>
-			    			<select class="span5 input" name="inputObjet">
-							  <option value="1">PMA &amp; stérilité</option>
-							  <option value="2">Sénologie &amp; tumeurs du sein</option>
-							  <option value="3">Mutilation sexuelle</option>
-							  <option value="4">Chirurgie gynécologique</option>
-							  <option value="5">Planning Familial</option>
-							  <option value="0">Autre problème gynécologique</option>
-						  	</select>
+							<label>Date prévue pour l'accouchement</label>
+			    			<input class="span1 input" type="text" name="inputAccJ" placeholder="JJ">
+			    			<input class="span1 input" type="text" name="inputAccM" placeholder="MM">
+			    			<input class="span2 input" type="text" name="inputAccA" placeholder="AAAA">
 			    			
 			    			<br>
-			    			<label>Détails de votre demande</label>
-			    			<textarea class="span6 input" name="inputPrecisions" rows="4"></textarea>
+			    			<label>Couverture sociale</label>
+			    			<label class="radio" style="float: left; margin-right: 30px;">
+		    					<input type="radio" name="optionsCouverture" value="SS"> Sécurité Sociale
+	    					</label>
+			    			<label class="radio" style="float: left; margin-right: 30px;">
+		    					<input type="radio" name="optionsCouverture" value="CMU"> CMU
+			    			</label>
+			    			<label class="radio" style="float: left; margin-right: 30px;">
+		    					<input type="radio" name="optionsCouverture" value="AME93"> AME93
+			    			</label>
+			    			<label class="radio" style="float: left; margin-right: 30px;">
+		    					<input type="radio" name="optionsCouverture" value="Vide"> Absence de droits
+							</label>
+			    			
+			    			<br>
+			    			<br>
+			    			<label class="checkbox">
+			    				<input type="checkbox" name="inputCGU"> J'ai pris connaissance du règlement intérieur et de la charte de laïcité du centre Hospitalier de Saint Denis et en accepte les termes et conditions.
+						    </label>
 			    			
 					  		<br>
 					  		<button type="submit" class="btn">Envoyer la demande</button>
