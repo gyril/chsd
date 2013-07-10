@@ -54,8 +54,8 @@
 	          <div class="nav-collapse collapse">
 	            <ul class="nav">
 	              <li class="active"><a href="index2.html">Accueil</a></li>
-	              <li><a href="consulter2.html">Consultation</a></li>
-	              <li><a href="accouchement2.html">Accouchement</a></li>
+	              <li><a href="consulter2-sas.html">Consultation</a></li>
+	              <li><a href="accouchement2-sas.html">Accouchement</a></li>
 	              <li><a href="equipe2.html">Equipe médicale</a></li>
 	              <li><a href="professionnels2.html">Réseau ville</a></li>
 	              <li><a href="chiffres-cles2.html">Chiffres clés</a></li>
@@ -67,14 +67,6 @@
     </div>
     
     <div class="head-image">
-    	<div class="container">
-	    	<div class="head-pastille">
-	    		Pour chaque femme...
-	    	</div>
-	    	<div class="head-pastille">
-	    		...à chaque étape 
-	    	</div>
-	    </div>
 	    
 	    <div class="head-bandeau">
 	    	<div class="container">
@@ -112,12 +104,19 @@
 				</div>
 			</div>
 	    </div>
+	    
+    	<div class="container">
+	    	<div class="head-pastille">
+	    		<span id="baseline1">Pour chaque femme,</span>
+	    		<span id="baseline2">à chaque étape</span>
+	    	</div>
+	    </div>
+
     </div>
    
 
     <div class="container" style="padding-top: 20px;">
-    	<h1>Pour chaque femme, à chaque étape</h1>
-    	<hr>
+    	
 	  <div class="row">
 	      <div class="tabbable tabs-left">
 			<ul class="nav nav-tabs span4">
@@ -206,6 +205,15 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script type="text/javascript">
+    	window.setTimeout(function() {
+    		document.getElementById("baseline1").style.opacity = 1;
+    		window.setTimeout(function() {
+    			document.getElementById("baseline2").style.opacity = 1;
+    		}, 1300);
+    	}, 500);
+    </script>
 
 
   </body>

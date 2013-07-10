@@ -67,7 +67,7 @@ h3 {
 .head-image {
 	background: url('../img/wp4.jpg') center;
 	background-size: 100%;
-	height: 320px;
+	height: 380px;
 	box-shadow: 0 -3px 5px 0 #555 inset;
 	border-bottom: 2px solid lightgrey;
 	position: relative;
@@ -78,33 +78,40 @@ h3 {
 }
 
 .head-pastille {
-	visibility: hidden;
 	position: relative;
-	top: 50px;
+	top: 190px;
 	display: inline-block;
 	padding: 10px;
 	color: white;
-	background-color: rgba(238, 124, 238, 0.9);
-	box-shadow: 0 0 10px 0 black;
-	font: 22pt Roboto;
-	text-transform: uppercase;
-	font-weight: 100;
+	/*background-color: rgba(238, 124, 238, 0.9);
+	box-shadow: 0 0 10px 0 black; */
+	text-shadow: 0 0 7px black;
+	font: 25pt Roboto;
+	font-style: italic;
+	/*text-transform: uppercase;
+	font-weight: 100;*/
 }
 
 .head-bandeau {
 	position: relative;
-	top: 110px;
-	height: 140px;
+	top: 190px;
+	height: 124px;
 	/*border-top: 2px solid rgba(238, 124, 238, 0.6);
 	border-bottom: 2px solid rgba(238, 124, 238, 0.6);*/
 	background-color: rgba(80, 80, 80, 0.25);
+}
+
+#baseline1, #baseline2 {
+	opacity: 0;
+	transition: opacity 800ms;
+	-webkit-transition: opacity 800ms;
 }
 
 .bouton-orientation {
 	border-radius: 10px;
 	overflow: hidden;
 	display: block;
-	margin: 22px 2px;
+	margin: 14px 2px;
 	padding: 00px;
 	background-color: rgba(255, 255, 255, 0.9);
 	box-shadow: 0 0 5px 0 black;
@@ -115,7 +122,7 @@ h3 {
 }
 
 .bouton-orientation:hover {
-	margin: 20px 0;
+	margin: 12px 0;
 	border: 2px solid rgba(238, 124, 238, 0.9);
 	color: #0088cc;
 }
