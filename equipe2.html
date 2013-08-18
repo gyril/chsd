@@ -54,7 +54,7 @@
 	            <ul class="nav">
 	              <li><a href="index2.html">Accueil</a></li>
 	              <li><a href="consulter2-sas.html">Consultation</a></li>
-	              <li><a href="accouchement2-sas.html">Accouchement</a></li>
+	              <li><a href="accouchement2-sas.html">Maternité</a></li>
 	              <li class="active"><a href="equipe2.html">Equipe médicale</a></li>
 	              <li><a href="professionnels2.html">Professionnels</a></li>
 	              <li><a href="chiffres-cles2.html">Chiffres clés</a></li>
@@ -130,7 +130,7 @@
 		<div class="row" style="overflow: hidden;">
 			<div class="span8">
 				
-				<section id="hatem">
+				<section id="hatem" data-spe="0_1">
 					<div class="fiche">
 						<img class="mugshot" src="./img/ghada-hatem-240.jpg" />
 						<div class="fiche-info">
@@ -152,7 +152,7 @@
 					</div>
 				</section>
 				
-				<section id="bounan">
+				<section id="bounan" data-spe="0_2_4">
 					<div class="fiche">
 						<img class="mugshot" src="./img/stephane-bounan-240.jpg" />
 						<div class="fiche-info">
@@ -173,7 +173,7 @@
 					</div>
 				</section>
 				
-				<section id="bui">
+				<section id="bui" data-spe="0_2_3">
 					<div class="fiche">
 						<img class="mugshot" src="./img/cb-240.jpg" />
 						<div class="fiche-info">
@@ -194,7 +194,7 @@
 					</div>
 				</section>
 				
-				<section id="domine">
+				<section id="domine" data-spe="0_1">
 					<div class="fiche">
 						<img class="mugshot" src="./img/sd-240.jpg" />
 						<div class="fiche-info">
@@ -216,7 +216,7 @@
 					</div>
 				</section>
 				
-				<section id="dumesnil">
+				<section id="dumesnil" data-spe="0_2_3">
 					<div class="fiche">
 						<img class="mugshot" src="./img/jd-240.jpg" />
 						<div class="fiche-info">
@@ -239,7 +239,7 @@
 					</div>
 				</section>
 				
-				<section id="ekoukou">
+				<section id="ekoukou" data-spe="0">
 					<div class="fiche">
 						<img class="mugshot" src="./img/de-240.jpg" />
 						<div class="fiche-info">
@@ -259,7 +259,7 @@
 					</div>
 				</section>
 				
-				<section id="fuhrer">
+				<section id="fuhrer" data-spe="0">
 					<div class="fiche">
 						<img class="mugshot" src="./img/pf-240.jpg" />
 						<div class="fiche-info">
@@ -279,7 +279,7 @@
 					</div>
 				</section>
 				
-				<section id="rami">
+				<section id="rami" data-spe="0">
 					<div class="fiche">
 						<img class="mugshot" src="./img/michel-rami-240.jpg" />
 						<div class="fiche-info">
@@ -299,7 +299,7 @@
 					</div>
 				</section>
 				
-				<section id="rotten">
+				<section id="rotten" data-spe="0_3">
 					<div class="fiche">
 						<img class="mugshot" src="./img/daniel-rotten-240.jpg" />
 						<div class="fiche-info">
@@ -319,7 +319,7 @@
 					</div>
 				</section>
 				
-				<section id="abramowicz">
+				<section id="abramowicz" data-spe="0_2_4">
 					<div class="fiche">
 						<img class="mugshot" src="./img/sa-240.jpg" />
 						<div class="fiche-info">
@@ -340,7 +340,7 @@
 					</div>
 				</section>
 				
-				<section id="belmaghni">
+				<section id="belmaghni" data-spe="0_2_3">
 					<div class="fiche">
 						<img class="mugshot" src="./img/fatma-belmaghni-240.jpg" />
 						<div class="fiche-info">
@@ -361,7 +361,7 @@
 					</div>
 				</section>
 				
-				<section id="guennas">
+				<section id="guennas" data-spe="0">
 					<div class="fiche">
 						<img class="mugshot" src="./img/fatiha-guennas-240.jpg" />
 						<div class="fiche-info">
@@ -382,7 +382,7 @@
 					</div>
 				</section>
 				
-				<section id="maraux">
+				<section id="maraux" data-spe="0_2">
 					<div class="fiche">
 						<img class="mugshot" src="./img/bm-240.jpg" />
 						<div class="fiche-info">
@@ -403,7 +403,7 @@
 					</div>
 				</section>
 				
-				<section id="moulin">
+				<section id="moulin" data-spe="0">
 					<div class="fiche">
 						<img class="mugshot" src="./img/jm-240.jpg" />
 						<div class="fiche-info">
@@ -424,7 +424,7 @@
 					</div>
 				</section>
 				
-				<section id="nguyen">
+				<section id="nguyen" data-spe="0_2">
 					<div class="fiche">
 						<img class="mugshot" src="./img/cn-240.jpg" />
 						<div class="fiche-info">
@@ -480,6 +480,29 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    
+    <script type="text/javascript">
+    	var radios = document.getElementsByName("filter");
+    	for(var i=0; i<radios.length; i++) {
+    		radios[i].addEventListener("click", checkFilter, false);
+    	}
+    	
+    	function checkFilter() {
+    		var radios = document.getElementsByName("filter");
+			for(var i=0; i<radios.length; i++) {
+				if(radios[i].checked)
+					filter(i);
+    		}
+    	}
+    	
+    	function filter(val) {
+    		var staff = document.getElementsByTagName("section");
+    		for(var i=0; i<staff.length; i++)
+    			if(staff[i].getAttribute("data-spe").split("_").indexOf(val.toString()) >= 0)
+    				staff[i].style.display = "block";
+    			else staff[i].style.display = "none";
+    	}
+    </script>
 
 
   </body>
