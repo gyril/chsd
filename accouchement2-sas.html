@@ -82,14 +82,19 @@
 			<h1>Votre grossesse et votre accouchement</h1>
 		</div>
 		
-		<div style="margin-bottom: 50px; overflow: hidden;">
+		<div style="margin-bottom: 20px; overflow: hidden;">
 			<div class="row">
 				<div class="span6">
 					<h3>Pourquoi accoucher à Delafontaine ?</h3>
-					<p style="text-align: justify;">La maternité Angélique du Coudray a choisi de mobiliser l'ensemble de ses équipes autour de l'accompagnement de la femme enceinte et de son conjoint.</p>
+					<p style="text-align: justify;">Parce que c'est une <strong>maternité de type 3</strong> où la sécurité de la mère et de l'enfant est prioritaire, tout en évitant leur séparation grâce aux services de néonatalogie et de réanimation.</p>
+					<p style="text-align: justify;">Parce que l'objectif de l'équipe est de vous accompagner à toutes les étapes de cette formidable aventure.</p>
+					<p style="text-align: justify;">Parce que nous mettons tout en oeuvre pour répondre à vos attentes: préparation à l'accouchement personnalisée, prise en charge de la douleur, prise en compte de votre projet de naissance, respect de la physiologie, soutien à l'allaitement.</p>
+					<p style="text-align: justify;">Parce que nos locaux sont neufs, lumineux et confortables : l'hotellerie a été entièrement rénovée et compte désormais 80% de chambres individuelles.</p>
+					
+					<!-- <p style="text-align: justify;">La maternité Angélique du Coudray a choisi de mobiliser l'ensemble de ses équipes autour de l'accompagnement de la femme enceinte et de son conjoint.</p>
 					<p style="text-align: justify;">L'accouchement est un évènement unique, chargé d'émotions et riche en conséquences dans la vie d'un couple. Aussi, nous mettons tout en oeuvre pour que ce moment vous appartienne pleinement, quelles que puissent être les contraintes éventuelles  qui pourraient le perturber.</p>
 					<p style="text-align: justify;">Nous nous efforçons de mettre en place l'ensemble des dispositions qui garantissent la sécurité des soins qui vous sont offerts, sans rien céder à leur qualité ni à leur humanité.</p>
-					<p style="text-align: justify;">Votre choix sera respecté autant que possible, et, si vous avez élaboré un projet de naissance, nous aurons à coeur de le faire vivre.</p>
+					<p style="text-align: justify;">Votre choix sera respecté autant que possible, et, si vous avez élaboré un projet de naissance, nous aurons à coeur de le faire vivre.</p> -->
 				</div>
 				<div class="span6" style="padding-top:50px;">
 					<iframe width="445" height="250" src="//www.youtube.com/embed/mhgzo3bAaU4" frameborder="0" allowfullscreen></iframe>
@@ -97,7 +102,9 @@
 			</div>
 			<hr>
 			<p>
+				<h3>Sommaire</h3>
 				<ul class="menu-accouchement">
+					<li><a href="#infos">Informations pratiques</a></li>
 					<li><a href="#accueil">La consultation d'accueil</a></li>
 					<li><a href="#suivi">Un suivi de grossesse personnalisé</a></li>
 					<li><a href="#preparation">La préparation à l'accouchement</a></li>
@@ -108,6 +115,29 @@
 			</p>
 			<hr>
 		</div>
+		
+		<section id="infos">
+			<div style="margin-bottom: 50px; overflow: hidden;">
+				<h3>Informations pratiques</h3>
+				<h4>Semaines de grossesse</h4>
+				<div class="row">
+					<div class="span3">
+						<div id="calendar">
+					        <span class="arrow" style="left:0px" onclick="Util.month--; Util.displaymonth();"> < </span>
+					        <div id="month"></div>
+					        <span onclick="Util.month++; Util.displaymonth();" style="right:0px" class="arrow"> > </span>
+							<div id="days"></div>
+						</div>
+						<p style="text-align: center; font-size: 0.9em;"><em>Sélectionnez la date du premier jour de vos dernières règles</em></p>
+					</div>
+					<div class="span9">
+						<p>Vos dernières règles ont commencé le <span id="lastR" style="color: rgb(223, 93, 160); font-weight: bold;"></span> ?</p>
+						<p>Vous êtes à <span style="color: rgb(223, 93, 160); font-weight: bold;"><span id="semaines" style="font-size: 1.8em;"></span> semaine(s) et <span id="jours" style="font-size: 1.8em;"></span> jour(s)</span> d'aménorrhées.</p>
+						<p>Gardez ce chiffre en tête et tenez le à jour, il vous sera demandé régulièrement, notamment lors de votre première prise de conact avec l'hôpital.</p>
+					</div>
+				</div>
+			</div>
+		</section>
 		
 		<section id="accueil">
 			<div style="margin-bottom: 50px; overflow: hidden;">
@@ -133,9 +163,11 @@
 				<br>
 				<h4>Service social</h4>
 				<p style="text-align: justify;">Une équipe d'assistantes sociales vous accueille du lundi au vendredi pour vous informer sur vos droits et vous aider dans vos démarches.</p>
+				<p style="text-align: justify;">Le service social est joignable au 01 42 35 60 25.</p>
 				<br>
 				<h4>Unité de Psychopathologie Périnatale</h4>
 				<p style="text-align: justify;">Une équipe de psychiatres et de psychologues est disponible pour toutes les situations difficiles et assurent les liens avec vos thérapeutes personnels.</p>
+				<p style="text-align: justify;">L'Unité de Psychopathologie Périnatale est joignable au 01 42 35 30 49.</p>
 				<br>
 				<h4>Dépistage des maladies et des malformations du bébé (échographie et diagnostic anté-natal)</h4>
 				<p style="text-align: justify;">Le diagnostic anténatal est assuré par des médecins spécialistes des pathologies fœtales. Ils accueillent les couples dont l’enfant à naitre présente une maladie ou un risque d’être malade. Notre plateau technique permet la réalisation d’échographies spécialisées et de prélèvements fœtaux (amniocentèses, biopsies de trophoblaste).<br> 
@@ -160,9 +192,9 @@
 			<div style="margin-bottom: 50px; overflow: hidden;">
 				<img src="img/wp8.jpg" class="img-polaroid" style="float:left; max-width:480px;  margin-right: 20px;"/>
 				<h3>La préparation à l'accouchement</h3>
-				<p style="text-align: justify;">La maternité propose une préparation riche et diversifiée, adaptée à vos attentes : préparation "classique", postures, sophrologie, cours de danse pour femmes enceintes, groupe "mes tissages", groupe de parole pour les futurs pères, visite de la maternité, etc.</p>
-				<p style="text-align: justify;">Le détail des différents ateliers est consultable dans le livret de préparation, à télécharger <a href="ressources/livret.pdf">ici</a>.</p>
-				<p style="text-align: justify;">L'inscription se fait sur place, à l'occasion de vos consultations de suivi.</p>
+				<p>La maternité propose une préparation riche et diversifiée, adaptée à vos attentes : préparation "classique", postures, sophrologie, cours de danse pour femmes enceintes, groupe "mes tissages", groupe de parole pour les futurs pères, visite de la maternité, etc.</p>
+				<p>Le détail des différents ateliers est consultable dans le livret de préparation, à télécharger <a href="ressources/preparation-a-l-accouchement.pdf" target="_blank">ici</a>.</p>
+				<p>L'inscription se fait sur place, à l'occasion de vos consultations de suivi.</p>
 			</div>
 		</section>
 		
@@ -170,7 +202,7 @@
 			<div style="margin-bottom: 50px; overflow: hidden;">
 				<img src="img/wp9.jpg" class="img-polaroid" style="float:right; max-width:480px;  margin-left: 30px;"/>
 				<h3>Le jour de l'accouchement</h3>
-				<p style="text-align: justify;"><em>N'oubliez pas d'avoir votre valise toujours prête dès le 8ème mois de grossesse : elle doit contenir vos affaires de toilette pour 3 à 5 jours ainsi que le trousseau du bébé, à télécharger <a href="ressources/trousseau.pdf">ici</a>.</em></p>
+				<p style="text-align: justify;"><em>N'oubliez pas d'avoir votre valise toujours prête dès le 8ème mois de grossesse : elle doit contenir vos affaires de toilette pour 3 à 5 jours ainsi que le trousseau du bébé, à télécharger <a href="ressources/trousseau.pdf" target="_blank">ici</a>.</em></p>
 				<p style="text-align: justify;">Présentez-vous aux urgences au premier étage. Vous serez reçue par un ou une des sages-femmes de garde qui pourra vous orienter, directement en salle de naissance, en hospitalisation ou en pré-travail si l’accouchement n’est pas imminent.<br>
 				Si possible, pensez à apporter vos derniers examens : prélèvement vaginal, bilan sanguin, échographie…  et le trousseau pour la maternité sans oublier vos papiers d’identité.<br>
 				Vous pouvez être accompagnée en salle d’accouchement par un adulte de votre choix : conjoint,  maman, sœur ou amie.</p>
@@ -196,9 +228,9 @@
 			<div style="margin-bottom: 50px; overflow: hidden;">
 				<img src="img/wp8.jpg" class="img-polaroid" style="float:left; max-width:480px;  margin-right: 20px;"/>
 				<h3>Le service de néonatologie</h3>
-				<p style="text-align: justify;">La maternité Delafontaine, <strong>de type III</strong>, dispose d'un service de néonatologie.</p>
-				<p style="text-align: justify;">L’unité kangourou nous permet de prendre en charge les nouveau-nés nécessitant une surveillance ou des soins sans séparation avec les parents. </p>
-				<p style="text-align: justify;">Les enfants très prématurés ou malades  sont confiés en néonatalogie ou en réanimation néo-natale à l’expertise d’un personnel spécialisé - infirmières, auxiliaires de puériculture, médecins réanimateurs, pédiatres - qui veille jour et nuit sur les incubateurs des nouveaux-nés. Dans ce service, tout a été pensé pour garantir aux bébés l’environnement le plus propice à leur développement.</p>
+				<p>La maternité Delafontaine, <strong>de type III</strong>, dispose d'un service de néonatologie.</p>
+				<p>L’unité kangourou nous permet de prendre en charge les nouveau-nés nécessitant une surveillance ou des soins sans séparation avec les parents. </p>
+				<p>Les enfants très prématurés ou malades  sont confiés en néonatalogie ou en réanimation néo-natale à l’expertise d’un personnel spécialisé - infirmières, auxiliaires de puériculture, médecins réanimateurs, pédiatres - qui veille jour et nuit sur les incubateurs des nouveaux-nés. Dans ce service, tout a été pensé pour garantir aux bébés l’environnement le plus propice à leur développement.</p>
 			</div>
 		</section>
 		
@@ -247,6 +279,76 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript">
+    		var Util = {
+    			debut: new Date(),
+    			months: ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+    			
+    			init: function () {
+					Util.timestamp = Math.floor(this.debut.getTime()/1000);
+					Util.year = this.debut.getFullYear();
+					Util.month = this.debut.getMonth();
+					Util.day = this.debut.getDate();
+					Util.hour = this.debut.getHours();
+					Util.minute = this.debut.getMinutes();
+				},
+					
+    			timestamptodate: function() {
+					var date = new Date(Util.timestamp*1000);
+					Util.year = date.getFullYear();
+					Util.month = date.getMonth();
+					Util.day = date.getDate();
+					Util.hour = date.getHours();
+					Util.minute = date.getMinutes();
+					
+					Util.displaymonth();
+				},
+				
+				displaymonth: function() {
+					if(Util.month < 0) {
+						Util.month = 11;
+						Util.year--;
+					} else if (Util.month > 11) {
+						Util.month = 0;
+						Util.year++;
+					}
+					
+					var premier = new Date(Util.year, Util.month, 1).getDay();
+					var duree = new Date(Util.year, Util.month+1, 0).getDate();
+					if(premier == 0)
+						premier = 7;
+	
+				    var monthValue = document.getElementById("month");
+					monthValue.innerHTML = Util.months[Util.month]+" "+Util.year;
+					
+					var days = "";
+					for (var i=1; i<premier; i++)
+						days +='<div class="day"> </div>';
+					for(var i=1; i<=duree; i++) {
+						days += '<div class="day';
+						days += (i==Util.day) ? ' select' : '';
+						days +='" onclick="Util.pickdate('+i+')">'+i+'</div>';
+					}
+					document.getElementById("days").innerHTML = days;
+				},
+				
+				pickdate: function(date) {
+					Util.day = date;
+					var datediff = (new Date()).getTime() - (new Date(Util.year, Util.month, Util.day)).getTime();
+					var semaines = Math.floor(Math.round(datediff/1000)/60/60/24/7);
+					var jours = Math.floor((Math.round(datediff/1000)/60/60/24/7 - semaines)*7);
+					document.getElementById("semaines").innerText = semaines;
+					document.getElementById("jours").innerText = jours;
+					document.getElementById("lastR").innerText = Util.day+" "+Util.months[Util.month].toLowerCase();
+					Util.displaymonth();
+				}
+			}
+			
+			Util.init();
+			Util.displaymonth();
+			Util.pickdate(Util.day);
+    	
+    </script>
 
 
   </body>

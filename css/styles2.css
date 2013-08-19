@@ -239,18 +239,18 @@ h4 {
 	padding: 5px;
 }
 
-.menu-accouchement {
+.menu-accouchement, .menu-consultation {
 	list-style: none;
 }
 
-.menu-accouchement a {
+.menu-accouchement a, .menu-consultation a {
 	color: rgb(223, 93, 160);
 	font-weight: bold;
 	line-height: 1.8em;
 	margin-left: -10px;
 }
 
-.menu-accouchement a:hover {
+.menu-accouchement a:hover, .menu-consultation a:hover {
 	color: rgb(223, 93, 160);
 }
 
@@ -275,4 +275,73 @@ h4 {
 .btn-pink:hover {
   	color: #FFF;
   	background-color: rgb(173, 71, 120);
+}
+
+#details {
+	position: absolute;
+	margin: 20px;
+	width: 180px;
+	padding: 10px;
+	box-shadow: 0 0 20px 0px black;
+	border: 10px solid white;
+	background: white;
+	font-family: Georgia;
+	visibility: hidden;
+}
+
+#calendar {
+	width: 168px;
+	margin: 0 auto;
+	height: 10em;
+	position: relative;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	
+	overflow: hidden;
+}
+
+#time {
+	width: 168px;
+	margin-bottom: 10px;
+}
+
+#slider {
+	width: 180px;
+}
+
+#month {
+	text-align: center;
+	margin: 0 auto;
+}
+
+#days {
+	width: 168px;
+}
+
+#days .day {
+	float: left;
+	width: 24px;
+	cursor: pointer;
+	text-align: center;
+}
+
+#days .select {
+	font-weight: bold;
+	color: rgb(223, 93, 160);
+}
+
+#moment {
+	text-align: center;
+}
+
+.arrow {
+	top: 0px;
+	width: 10px;
+	text-align: center;
+	position: absolute;
+	cursor: pointer;
 }

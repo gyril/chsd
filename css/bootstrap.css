@@ -4064,6 +4064,7 @@ input[type="submit"].btn.btn-mini {
   -webkit-border-radius: 4px 4px 0 0;
      -moz-border-radius: 4px 4px 0 0;
           border-radius: 4px 4px 0 0;
+  background-color: rgba(238,124,188,0.5);
 }
 
 .nav-tabs > li > a:hover,
@@ -4315,6 +4316,8 @@ input[type="submit"].btn.btn-mini {
 .tabs-left > .nav-tabs .active > a:focus {
   border-color: #ddd transparent #ddd #ddd;
   *border-right-color: #ffffff;
+  font-weight: bold;
+  color: rgb(223, 93, 160);
 }
 
 .tabs-right > .nav-tabs {
