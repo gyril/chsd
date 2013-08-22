@@ -90,6 +90,7 @@
     </div>
 
     <div class="container" style="padding-top: 20px;">
+    	<div id="notif" style="display: none; padding: 15px;" class="alert alert-success">Aucune notification.</div>
 		<div class="page-header">
 			<h1>Réseau professionnel</h1>
 		</div>
@@ -213,16 +214,22 @@
 					<p><strong>Accès restreint</strong></p>
 					<p>
 						Code d'accès
-						<div class="input-append">
-							<input style="width:80%;" id="validateRPPS" type="text">
-							<button class="btn btn-pink" type="button">Valider</button>
-						</div>
+						<form method="post" action="professionnels2-restreint.html">
+							<input type="hidden" name="id" value="login" />
+							<div class="input-append">
+								<input style="width:80%;" id="inputCode" type="password" />
+								<button class="btn btn-pink" type="button">Valider</button>
+							</div>
+						</form>
 						<hr>
 						<p style="font-size: 0.9em; font-style: italic;">Si vous n'avez pas de code, demandez-le en laissant votre adresse e-mail</p>
-						<div class="input-append">
-							<input style="width:74%;" id="sendmail" type="text">
-							<button class="btn btn-primary" type="button">Envoyer</button>
-						</div>
+						<form method="post" action="professionnels2.html?acces=requested">
+							<input type="hidden" name="id" value="acces" />
+							<div class="input-append">
+								<input style="width:74%;" name="inputMail" type="text" placeholder="prenom.nom@mail.com">
+								<button type="submit" class="btn btn-info">Envoyer</button>
+							</div>
+						</form>
 					</p>
 				</div>
 				<hr>
@@ -256,7 +263,20 @@
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
-
+	<script type="text/javascript">
+		var prmstr = window.location.search.substr(1);
+		var prmarr = prmstr.split ("&");
+		var params = {};
+		
+		for ( var i = 0; i < prmarr.length; i++) {
+		    var tmparr = prmarr[i].split("=");
+		    params[tmparr[0]] = tmparr[1];
+		}
+		
+		if(typeof params.acces != "undefined") {
+			document.getElementById("notif").innerHTML = "<strong>Merci !</strong> Votre demande a bien été enregistrée. Vous devriez recevoir un e-mail contenant votre code d'accès.";
+			document.getElementById("notif").style.display = "block";
+		}
+	</script>
   </body>
 </html>
