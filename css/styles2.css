@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,400italic);
-@import url(http://fonts.googl
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic);
 
 * {
 	margin: 0;
@@ -258,15 +258,15 @@ h4 {
 	min-height: 100%;
 	height: auto !important;
 	height: 100%;
-	margin: 0 auto -300px;
+	margin: 0 auto -250px;
 }
 
 .push {
-	height: 300px;
+	height: 250px;
 }
 
 .footer {
-	height: 300px;
+	height: 250px;
 	color: rgb(117, 0, 85);
 	text-shadow: 0 1px 1px rgb(216, 168, 193);
 	box-shadow: 0 -1px 5px 0 #555;
