@@ -232,7 +232,8 @@ h4 {
 	background-color: rgba(238,124,188,0.9);
 	line-height: 60px;
 	text-align: center;
-	color: white;
+	color: black;
+	text-shadow: 0 1px 1px rgb(216, 187, 202);
 }
 
 .fiche .fiche-detail {
