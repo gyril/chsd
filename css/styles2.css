@@ -292,6 +292,7 @@ h4 {
 	background-color: rgb(223, 91, 160);
 	background-image: -moz-linear-gradient(top,rgb(206, 125, 206),rgb(150, 74, 137));
 	background-image: -webkit-linear-gradient(top,rgb(233, 101, 170),rgb(183, 66, 120));
+	background-image: -ms-linear-gradient(top,rgb(233, 101, 170),rgb(183, 66, 120));
 }
   
 .btn-pink:hover {
