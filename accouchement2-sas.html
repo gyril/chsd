@@ -388,9 +388,9 @@
 					var datediff = (new Date()).getTime() - (new Date(Util.year, Util.month, Util.day)).getTime();
 					var semaines = Math.floor(Math.round(datediff/1000)/60/60/24/7);
 					var jours = Math.floor((Math.round(datediff/1000)/60/60/24/7 - semaines)*7);
-					document.getElementById("semaines").innerText = semaines;
-					document.getElementById("jours").innerText = jours;
-					document.getElementById("lastR").innerText = Util.day+" "+Util.months[Util.month].toLowerCase();
+					document.getElementById("semaines").textContent = semaines;
+					document.getElementById("jours").textContent = jours;
+					document.getElementById("lastR").textContent = Util.day+" "+Util.months[Util.month].toLowerCase();
 					Util.displaymonth();
 				}
 			}

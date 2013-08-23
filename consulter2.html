@@ -194,7 +194,7 @@
 		}
 		
 		if(typeof params.docteur != "undefined")
-			document.getElementsByName("inputPrecisions")[0].innerText = "Docteur souhaité : "+decodeURIComponent(params.docteur)+"\r\n";
+			document.getElementsByName("inputPrecisions")[0].textContent = "Docteur souhaité : "+decodeURIComponent(params.docteur)+"\r\n";
 			
 		if(typeof params.type != "undefined")
 			document.getElementsByName("inputObjet")[0].value = parseInt(params.type);
