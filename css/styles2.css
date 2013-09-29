@@ -296,7 +296,7 @@ h4 {
 	background-image: -ms-linear-gradient(top,rgb(233, 101, 170),rgb(183, 66, 120));
 }
   
-.btn-pink:hover {
+.btn-pink:hover, .btn-pink:focus {
   	color: #FFF;
   	background-color: rgb(173, 71, 120);
 }
