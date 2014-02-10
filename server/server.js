@@ -176,7 +176,7 @@ function checkFile(name) {
 	if(name == "" || name == "/")
   		name = "/index.html";
   		
-	return staticHandler(".."+name);
+	return staticHandler("."+name);
 }
 
 function loadJSON(file) {
