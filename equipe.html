@@ -72,7 +72,7 @@
 	              		<li><a href="informations-consultation.html#mutilations">Réparation des mutilations sexuelles</a></li>
 	              		<li><a href="informations-consultation.html#planning">Planning familial, IVG</a></li>
 	              	</ul>
-				  </li>
+				  			</li>
 	              <li><a href="informations-maternite.html">Maternité</a>
 	              	<ul class="sub-nav">
 	              		<li><a href="informations-maternite.html#infos">Infos pratiques</a></li>
@@ -161,6 +161,7 @@
 				<ul style="list-style: none;">
 					<li><label class="radio"><input name="filter" type="radio" id="filterPF" /> Planning Familial, IVG</label></li>
 					<li><label class="radio"><input name="filter" type="radio" id="filterEcho" /> Echographie</label></li>
+					<li><label class="radio"><input name="filter" type="radio" id="filterDAN" /> Diagnostic anté-natal</label></li>
 				</ul>
 			</div>
 		</div>
@@ -168,7 +169,7 @@
 		<div class="row" style="overflow: hidden;">
 			<div class="span8">
 				
-				<section id="hatem" data-spe="0_2">
+				<section id="hatem" data-spe="0_1_2">
 					<div class="fiche">
 						<img class="mugshot" src="./img/ghada-hatem-240.jpg" />
 						<div class="fiche-info">
@@ -245,7 +246,7 @@
 					</div>
 				</section>
 				
-				<section id="domine" data-spe="0">
+				<section id="domine" data-spe="0_1">
 					<div class="fiche">
 						<img class="mugshot" src="./img/sd-240.jpg" />
 						<div class="fiche-info">
@@ -321,7 +322,7 @@
 					</div>
 				</section>
 
-				<section id="joinau" data-spe="0_7">
+				<section id="joinau" data-spe="0_7_8">
 					<div class="fiche">
 						<img class="mugshot" src="./img/felicia-joinau-240.jpg" />
 						<div class="fiche-info">
@@ -470,7 +471,7 @@
 					</div>
 				</section>
 
-				<section id="dahan" data-spe="0_2_7">
+				<section id="dahan" data-spe="0_2_8">
 					<div class="fiche">
 						<img class="mugshot" src="./img/jessica-dahan-saal-240.jpg" />
 						<div class="fiche-info">
@@ -508,7 +509,7 @@
 					</div>
 				</section>
 				
-				<section id="maraux" data-spe="0_7">
+				<section id="maraux" data-spe="0_8">
 					<div class="fiche">
 						<img class="mugshot" src="./img/barbara-maraux-240.jpg" />
 						<div class="fiche-info">
@@ -527,7 +528,7 @@
 					</div>
 				</section>
 				
-				<section id="moulin" data-spe="0">
+				<section id="moulin" data-spe="0_1">
 					<div class="fiche">
 						<img class="mugshot" src="./img/jm-240.jpg" />
 						<div class="fiche-info">
@@ -546,7 +547,7 @@
 					</div>
 				</section>
 				
-				<section id="zerrouki" data-spe="0">
+				<section id="zerrouki" data-spe="0_2">
 					<div class="fiche">
 						<img class="mugshot" src="./img/amate-zerrouki-240.jpg" />
 						<div class="fiche-info">
@@ -626,11 +627,11 @@
     	
     	function checkFilter() {
     		var radios = document.getElementsByName("filter");
-			for(var i=0; i<radios.length; i++) {
-				if(radios[i].checked) {
-					filter(i);
-					ga('send', 'event', 'Equipe', 'Filtre', i.toString());
-				}
+				for(var i=0; i<radios.length; i++) {
+					if(radios[i].checked) {
+						filter(i);
+						ga('send', 'event', 'Equipe', 'Filtre', i.toString());
+					}
     		}
     	}
     	
