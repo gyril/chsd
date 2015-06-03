@@ -38,7 +38,8 @@ function sendMail(form) {
 						"Cancer du sein",
 						"Mutilations sexuelles",
 						"Chirurgie gynécologique",
-						"Planning Familial"
+						"Planning Familial",
+            "Fuites urinaires & descente d'organes"
 					];
 					
 		var adresses = [
