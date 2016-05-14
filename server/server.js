@@ -43,12 +43,12 @@ function sendMail(form) {
 					];
 					
 		var adresses = [
-						"cellule.telephonique@ch-stdenis.fr",
-						"centre.pma@ch-stdenis.fr",
-						"cellule.telephonique@ch-stdenis.fr",
-						"secretariat.deux@ch-stdenis.fr",
-						"cellule.telephonique@ch-stdenis.fr",
-						"cellule.telephonique@ch-stdenis.fr"
+						"cyril.gantzr@gmail.com",
+						"cyril.gantzr@gmail.com",
+						"cyril.gantzr@gmail.com",
+						"cyril.gantzr@gmail.com",
+						"cyril.gantzr@gmail.com",
+						"cyril.gantzr@gmail.com"
 					];
 					
 		var content = "Mme/Mlle <strong>"+form.inputPrenom+" "+form.inputNom+"</strong><br>"
