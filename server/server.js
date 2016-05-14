@@ -43,12 +43,12 @@ function sendMail(form) {
 					];
 					
 		var adresses = [
-						"cyril.gantzr@gmail.com",
-						"cyril.gantzr@gmail.com",
-						"cyril.gantzr@gmail.com",
-						"cyril.gantzr@gmail.com",
-						"cyril.gantzr@gmail.com",
-						"cyril.gantzr@gmail.com"
+						"cyril.gantzer@gmail.com",
+						"cyril.gantzer@gmail.com",
+						"cyril.gantzer@gmail.com",
+						"cyril.gantzer@gmail.com",
+						"cyril.gantzer@gmail.com",
+						"cyril.gantzer@gmail.com"
 					];
 					
 		var content = "Mme/Mlle <strong>"+form.inputPrenom+" "+form.inputNom+"</strong><br>"
