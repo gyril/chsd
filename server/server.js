@@ -65,7 +65,7 @@ function sendMail(form) {
         if (error)
             return console.log(error);
 
-        console.log('Message sent: ' + info.response);
+        console.log('Message sent: ' + info);
     });
 		
 	} else if(form.id == "accouchement") {
@@ -82,7 +82,12 @@ function sendMail(form) {
 		    to: "cellule.telephonique@ch-stdenis.fr",
 		    subject: "Demande d'inscription pour un accouchement",
 		    html: content
-		});
+		}, function(error, info) {
+        if (error)
+            return console.log(error);
+
+        console.log('Message sent: ' + info);
+    });
 		 
 	} else if(form.id =="acces") {
 		var content = "L'adresse e-mail : <strong>"+form.inputMail+"</strong> souhaite obtenir un code d'accès à la partie professionnelle.<br>"
@@ -92,7 +97,12 @@ function sendMail(form) {
 		    to: "ghada.hatem@ch-stdenis.fr", //autre?
 		    subject: "[Accès professionnel] Demande d'accès",
 		    html: content
-		});
+		}, function(error, info) {
+        if (error)
+            return console.log(error);
+
+        console.log('Message sent: ' + info);
+    });
 	}
 }
 	
