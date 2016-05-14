@@ -62,6 +62,8 @@ function sendMail(form) {
 		    subject: "["+objet[motif]+"] Demande de consultation",
 		    html: content
 		});
+
+    console.log('sent', content);
 		
 	} else if(form.id == "accouchement") {
 		var couverture = (form.optionsCouverture == "Vide") ? "aucune couverture" : (form.optionsCouverture == "SS") ? "Sécurité Sociale" : form.optionsCouverture; 
