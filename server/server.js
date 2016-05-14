@@ -65,7 +65,7 @@ function sendMail(form) {
         if (error)
             return console.log(error);
 
-        console.log('Message sent: ' + info);
+        console.log('Message sent', info);
     });
 		
 	} else if(form.id == "accouchement") {
@@ -86,7 +86,7 @@ function sendMail(form) {
         if (error)
             return console.log(error);
 
-        console.log('Message sent: ' + info);
+        console.log('Message sent', info);
     });
 		 
 	} else if(form.id =="acces") {
@@ -101,7 +101,7 @@ function sendMail(form) {
         if (error)
             return console.log(error);
 
-        console.log('Message sent: ' + info);
+        console.log('Message sent', info);
     });
 	}
 }
