@@ -234,7 +234,7 @@ h4 {
 	line-height: 60px;
 	text-align: center;
 	color: black;
-	text-shadow: 0 1px 1px rgb(216, 200, 210);
+	text-shadow: 0 1px 0px rgb(255, 190, 227);
 }
 
 .fiche .fiche-detail {
@@ -271,9 +271,9 @@ h4 {
 	height: 250px;
 	min-width: 960px;
 	color: rgb(117, 0, 85);
-	text-shadow: 0 1px 1px rgb(216, 168, 193);
-	box-shadow: 0 -1px 5px 0 #555;
-	border-top: 2px solid lightgrey;
+	text-shadow: 0 1px 0px rgb(247, 132, 192);
+	box-shadow: 0 -1px 5px 0 rgba(0,0,0,.5);
+	border-top: 1px solid lightgrey;
 	margin-top: 40px;
 	padding: 20px 0;
 	background-color: rgb(223, 93, 160);
@@ -281,7 +281,7 @@ h4 {
 
 .footer a {
 	color: rgb(117, 0, 85);
-	text-shadow: 0 1px 1px rgb(216, 168, 193);
+	text-shadow: 0 1px 0px rgb(247, 132, 192);
 }
 
 .footer strong {
