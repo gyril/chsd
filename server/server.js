@@ -39,7 +39,8 @@ function sendMail(form) {
 						"Mutilations sexuelles",
 						"Chirurgie gynécologique",
 						"Planning Familial",
-            "Fuites urinaires & descente d'organes"
+            "Fuites urinaires & descente d'organes",
+            "Endométriose"
 					];
 					
 		var adresses = [
