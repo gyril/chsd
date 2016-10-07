@@ -10,22 +10,30 @@ function notFound(req, res) {
   res.end(NOT_FOUND);
 }
 
+
 var starttime = (new Date()).getTime();
 
-var r = [ "url", "util", "fs", "http", "querystring", "nodemailer" ];
+var r = [ "url", "util", "fs", "http", "querystring" ];
 for (var i = 0; i < r.length; i++) { 
   global[r[i]] = require(r[i]); 
 }
 
+require('dotenv').config({path: 'server/.env'});
+var sendgridKey = (process.env.SENDGRID_KEY || 'SG.testKey');
+var sendgrid = require('sendgrid')(sendgridKey);
+
+sendgrid.send({ 
+	to: 'cyril.gantzer@gmail.com',
+	from: 'no-reply@maternite-delafontaine.fr',
+	subject: 'Demande de consultation', 
+	html: 'prout pouet from server'
+}, function (err, json) { 
+	if (err) { return console.error(err); } 
+	
+	console.log('Message sent', json);
+});
+
 var readFile = fs.readFile;
-var transport = nodemailer.createTransport("SMTP", {
-	host: "smtp.gmail.com", // hostname
-    secureConnection: true, // use SSL
-    port: 465, // port for secure SMTP
-    auth: {
-        user: "maternite.delafontaine@gmail.com",
-        pass: "chsdgadu140"
-    }});
     
 function sendMail(form) {
 	
@@ -39,8 +47,8 @@ function sendMail(form) {
 						"Mutilations sexuelles",
 						"Chirurgie gynécologique",
 						"Planning Familial",
-            "Fuites urinaires & descente d'organes",
-            "Endométriose"
+						"Fuites urinaires & descente d'organes",
+						"Endométriose"
 					];
 					
 		var adresses = [
@@ -49,25 +57,27 @@ function sendMail(form) {
 						"cellule.telephonique@ch-stdenis.fr",
 						"secretariat.deux@ch-stdenis.fr",
 						"cellule.telephonique@ch-stdenis.fr",
+						"planning@ch-stdenis.fr",
+						"cellule.telephonique@ch-stdenis.fr",
 						"cellule.telephonique@ch-stdenis.fr"
 					];
 					
 		var content = "Mme/Mlle <strong>"+form.inputPrenom+" "+form.inputNom+"</strong><br>"
 					+ "joignable au <strong>"+form.inputTel+"</strong> ou par e-mail à l'adresse "+form.inputMail+"<br>"
 					+ "souhaite consulter en <strong>"+objet[motif]+"</strong><br>"
-					+ "Elle fournit les précisions suivantes :<br>"+form.inputPrecisions;
-					
-		transport.sendMail({
-		    from: "'Maternité Angélique du Coudray' maternite.delafontaine@gmail.com",
-		    to: adresses[motif],
-		    subject: "["+objet[motif]+"] Demande de consultation",
-		    html: content
-		}, function(error, info) {
-        if (error)
-            return console.log(error);
-
-        console.log('Message sent', info);
-    });
+					+ "Elle fournit les précisions suivantes :<br>"+form.inputPrecisions
+					+ "<br><br><br><em>Ce message est envoyé automatiquement, il est inutile d'y répondre.</em>";
+		
+		sendgrid.send({ 
+			to: adresses[motif],
+			from: 'no-reply@maternite-delafontaine.fr',
+			subject: '['+objet[motif]+'] Demande de consultation', 
+			html: content
+		}, function (err, json) { 
+			if (err) { return console.error(err); } 
+			
+			console.log('Message sent', json);
+		});
 		
 	} else if(form.id == "accouchement") {
 		var couverture = (form.optionsCouverture == "Vide") ? "aucune couverture" : (form.optionsCouverture == "SS") ? "Sécurité Sociale" : form.optionsCouverture; 
@@ -75,35 +85,35 @@ function sendMail(form) {
 					+ "joignable au <strong>"+form.inputTel+"</strong> ou par e-mail à l'adresse "+form.inputMail+"<br>"
 					+ "a rempli en ligne une demande d'inscription à l'accouchement.<br>"
 					+ "La date d'accouchement prévue est le "+form.inputAccJ+"/"+form.inputAccM+"/"+form.inputAccA+".<br>"
-					+ "Elle indique la couverture sociale suivante : <strong>"+couverture+"</strong>.";
+					+ "Elle indique la couverture sociale suivante : <strong>"+couverture+"</strong>."
+					+ "<br><br><br><em>Ce message est envoyé automatiquement, il est inutile d'y répondre.</em>";
 		
-		console.log(content);			
-		transport.sendMail({
-		    from: "'Maternité Angélique du Coudray' maternite.delafontaine@gmail.com",
-		    to: "cellule.telephonique@ch-stdenis.fr",
-		    subject: "Demande d'inscription pour un accouchement",
-		    html: content
-		}, function(error, info) {
-        if (error)
-            return console.log(error);
+		console.log(content);
 
-        console.log('Message sent', info);
-    });
+		sendgrid.send({ 
+			to: 'cellule.telephonique@ch-stdenis.fr',
+			from: 'no-reply@maternite-delafontaine.fr',
+			subject: 'Demande d\'inscription pour un accouchement',
+			html: content
+		}, function (err, json) { 
+			if (err) { return console.error(err); } 
+			
+			console.log('Message sent', json);
+		});
 		 
 	} else if(form.id =="acces") {
 		var content = "L'adresse e-mail : <strong>"+form.inputMail+"</strong> souhaite obtenir un code d'accès à la partie professionnelle.<br>"
 		
-		transport.sendMail({
-		    from: "'Maternité Angélique du Coudray' maternite.delafontaine@gmail.com",
-		    to: "ghada.hatem@ch-stdenis.fr", //autre?
-		    subject: "[Accès professionnel] Demande d'accès",
-		    html: content
-		}, function(error, info) {
-        if (error)
-            return console.log(error);
-
-        console.log('Message sent', info);
-    });
+		sendgrid.send({ 
+			to: 'ghada.hatem@ch-stdenis.fr',
+			from: 'no-reply@maternite-delafontaine.fr',
+			subject: '[Accès professionnel] Demande d\'accès',
+			html: content
+		}, function (err, json) { 
+			if (err) { return console.error(err); } 
+			
+			console.log('Message sent', json);
+		});
 	}
 }
 	
