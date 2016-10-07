@@ -21,6 +21,17 @@ for (var i = 0; i < r.length; i++) {
 var sendgridKey = (process.env.SENDGRID_KEY || 'SG.testKey');
 var sendgrid = require('sendgrid')(sendgridKey);
 
+sendgrid.send({ 
+	to: 'cyril.gantzer@gmail.com',
+	from: 'no-reply@maternite-delafontaine.fr',
+	subject: 'Demande de consultation', 
+	html: 'prout pouet from server'
+}, function (err, json) { 
+	if (err) { return console.error(err); } 
+	
+	console.log('Message sent', json);
+});
+
 var readFile = fs.readFile;
     
 function sendMail(form) {
