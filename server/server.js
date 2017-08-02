@@ -50,7 +50,7 @@ function sendMail(form) {
 						"cellule.telephonique@ch-stdenis.fr"
 					];
 					
-		var content = "Mme/Mlle <strong>"+form.inputPrenom+" "+form.inputNom+"</strong><br>"
+		var content = "Mme/Mlle <strong>"+form.inputPrenom+" "+form.inputNom+"</strong>, née le "+form.inputNaissanceJ+"/"+form.inputNaissanceM+"/"+form.inputNaissanceA+"<br>"
 					+ "joignable au <strong>"+form.inputTel+"</strong> ou par e-mail à l'adresse "+form.inputMail+"<br>"
 					+ "souhaite consulter en <strong>"+objet[motif]+"</strong><br>"
 					+ "Elle fournit les précisions suivantes :<br>"+form.inputPrecisions
