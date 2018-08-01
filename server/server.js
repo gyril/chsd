@@ -152,17 +152,15 @@ function staticHandler(filename) {
       return;
     }
 
-    util.puts("loading " + filename + "...");
     readFile(filename, function (err, data) {
       if (err) {
-        util.puts("Error loading " + filename);
+        console.log("Error loading " + filename);
       } else {
         body = data;
         headers = { "Content-Type": content_type
                   , "Content-Length": body.length
                   };
         if (!DEBUG) headers["Cache-Control"] = "public";
-        util.puts("static file " + filename + " loaded");
         callback();
       }
     });
@@ -174,17 +172,6 @@ function staticHandler(filename) {
       res.end(req.method === "HEAD" ? "" : body);
     });
   }
-};
-
-var getMap = {};
-
-getMap['/submit.html'] = function (req, res) {
-	console.log(req.method);
-	
-	if(req.method == "POST") {
-
-	}
-	return;
 };
 
 function checkFile(name) {
